@@ -17,55 +17,20 @@ To reference an icon from this library in XAML, use the pack URI scheme of the i
 ```xml
 <Image Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/ProjectExplorer/Images/AddPullDown_16x16.png"/>
 ```
-import iconGroups from './icons.json'
-const iconGroups2 = [
-   {
-   "path": "Resources",
-   "icons": [{
-         "icon": "AddFolder_16x16.png"
-      },
-      {
-         "icon": "BoldFontStyle_16x16.png"
-      }
-   ]
-},
-{
-   "path": "Shell/Images",
-   "icons": [{
-         "icon": "ChooseSaveLocation_16x16.png"
-      },
-      {
-         "icon": "ErrorPane_16X16.png"
-      }
-   ]
-},
-{
-   "path": "HelpCommon/Images",
-   "icons": [{
-         "icon": "OverlayHelpButtonOff_16x16.png"
-      },
-      {
-         "icon": "OverlayHelpButtonOn_16x16.png"
-      }
-   ]
-}] 
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Example</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-  { iconGroups.map(group => {
-    return (
-    <tr>
-      <td> { group.path } </td>
-    </tr> )
-    }
-  )}
-  </tbody>
-</table>
+import iconGroups from './icons.json'
+
+<link rel='stylesheet' href='../../icons/icons.css'/>
+<ul class="remove-bullet">
+{ iconGroups.map(group => (
+  <li> { group.path } 
+    <div class="flex-container">{ group.icons.map(icons => (
+      <div class="flex-item flex-tile"> 
+        <div class="flex-tile-item"><img class="icon" src={ '../../icons/' + group.path + '/' + icons.icon }/> </div>
+        <div class="flex-tile-item">{ icons.icon }</div>
+      </div>
+    ))}
+    </div>
+  </li>
+  ))}
+</ul>

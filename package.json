@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "gatsby": "2.9.4",
-    "gatsby-cli": "^2.7.6",
     "gatsby-theme-ni-docs": "^1.0.24",
     "gh-pages": "^2.0.1"
   }

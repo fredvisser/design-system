@@ -16,7 +16,7 @@ module.exports = {
           ],
           Style: [
             'style/colors',
-            // 'style/icons',
+            'style/icons',
             'style/text-capitalization',
             'style/typography',
           ],
@@ -56,8 +56,8 @@ module.exports = {
             'patterns/errors',
           ],
           Resources: [
-            'fuse/resources/code-samples',
-            'fuse/resources/fonts',
+            'resources/code-samples',
+            'resources/fonts',
           ]
         }
       }
