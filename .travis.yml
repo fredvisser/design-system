@@ -8,11 +8,9 @@ before_install:
 - export TZ=America/Chicago
 
 install: 
-  - npm install -g bower
-  - bower install
-  - bundle install
+  - npm install
 
-script: jekyll build ./_site 
+script: npm run build-storybook
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
@@ -20,6 +18,8 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
+  repo: ni/design-system
+  target_branch: gh-pages
   on:
     branch: master
-  local_dir: app/_site  
+  local_dir: build/storybook  

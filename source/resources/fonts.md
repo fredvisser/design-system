@@ -6,6 +6,7 @@ tags:
     - fonts
     - typography
 status: WIP
+
 ---
 
 This page includes links and resources to provide access and downloads for using the typography styles in NI software.
@@ -14,6 +15,6 @@ Segoe UI fonts are available from Microsoft at [Design toolkits and resources fo
 
 #### Paragraph styles for Adobe Illustrator
 This file includes paragraph styles used in NI software.  
-[Download the paragraph styles](../../ni-paragraph-styles.ai)
+<a href='../../ni-paragraph-styles.ai.zip'>Download the paragraph styles</a>
 
 
