@@ -13,7 +13,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
-  repo: ni/design-system
+  repo: fredvisser/design-system
   target_branch: gh-pages
   on:
     branch: master
