@@ -5,7 +5,7 @@ cache: npm
 install: 
   - npm install
 
-script: npm run build-storybook
+script: npm run deploy
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
@@ -17,4 +17,4 @@ deploy:
   target_branch: gh-pages
   on:
     branch: master
-  local_dir: build/storybook  
+  local_dir: public 
